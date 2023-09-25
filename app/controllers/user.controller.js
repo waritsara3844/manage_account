@@ -114,6 +114,7 @@ const deleteUser = (req, res) => {
     }
   });
 };
+
 module.exports = {
   validUsername,
   createNewUser,
