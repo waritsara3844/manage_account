@@ -15,6 +15,6 @@ setInterval(function () {
   connection.ping((err) => {
     if (err) throw err;
   });
-}, 10000);
+}, 5000);
 
 module.exports = connection;

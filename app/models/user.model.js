@@ -69,9 +69,11 @@ User.loginModel = (account, result) => {
           console.log("Login success. Token was generated." + token);
           res[0].accessToken = token;
           result(null, res[0]);
+          return;
         } else {
           console.log("Password not match");
           result({ kind: "invalid_pass" }, null);
+          return;
         }
       }
       return result({ kind: "not find" }, null);
