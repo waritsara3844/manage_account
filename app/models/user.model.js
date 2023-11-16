@@ -80,11 +80,12 @@ User.loginModel = (account, result) => {
     }
   );
 };
+
 User.getAllRecode = (result) => {
   sql.query("SELECT * FROM users", (error, res) => {
     if (error) {
-      console.log("Query err: " + err);
-      result(err, null);
+      console.log("Query err: " + error);
+      result(error, null);
       return;
     }
     result(null, res);

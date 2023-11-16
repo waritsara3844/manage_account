@@ -1,5 +1,6 @@
 const User = require("../models/user.model");
 const bcrypt = require("bcryptjs");
+
 const validUsername = (req, res) => {
   User.checkUsername(req.params.us, (err, data) => {
     if (err) {
